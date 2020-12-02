@@ -5,6 +5,13 @@ class Password
   /* Sample:
   "2-5 w: dgqtwwkwwc" -> for the PW to be valid it needs 2-5 w's in the password. dgqtwwkwwc has 4 w's so it is valid
 
+  try using this next time to break up a string into parts. My current solution is clunky 
+  let fullName    = "First Last"
+  let fullNameArr = fullName.components(separatedBy: " ")
+
+  let name    = fullNameArr[0]
+  let surname = fullNameArr[1]
+  
   */
   var original: String
   var pw: String // the password
