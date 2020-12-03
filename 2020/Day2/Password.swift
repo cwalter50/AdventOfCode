@@ -12,6 +12,14 @@ class Password
   let name    = fullNameArr[0]
   let surname = fullNameArr[1]
   
+  // This line has three different separators.
+let line = "a:b,c;d"
+
+// Create a CharacterSet of delimiters.
+let separators = CharacterSet(charactersIn: ":,;")
+// Split based on characters.
+let parts = line.components(separatedBy: separators)
+  
   */
   var original: String
   var pw: String // the password
