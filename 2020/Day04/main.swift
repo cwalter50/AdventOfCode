@@ -7,7 +7,7 @@ import Foundation
  */
 
 var myStrings = [String]()
-if let path = Bundle.main.path(forResource: "Data", ofType: "txt") {
+if let path = Bundle.main.path(forResource: "data", ofType: "txt") {
     do {
         let data = try String(contentsOfFile: path, encoding: .utf8)
         // Split based on characters.
