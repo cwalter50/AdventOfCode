@@ -1,0 +1,1 @@
+This challenge was very hard for me, but very also rewarding when I figured it out. Needed to rethink the problem multiple times to finally figure out the correct algorithm. For part 2, I used recursion!
