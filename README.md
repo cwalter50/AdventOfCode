@@ -6,3 +6,4 @@ I learned about this in 2020 from a student and will try my best to complete as 
 https://adventofcode.com/
 
 2020 Notes: I will try to complete these challenges using a mixture of swift and java.
+2021 Notes: I will try to complete these challenges using Swift, Java, and Python. Trying to learn Python.
