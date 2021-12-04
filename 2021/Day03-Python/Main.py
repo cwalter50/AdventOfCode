@@ -3,7 +3,7 @@
 # https://adventofcode.com/2021/day/3
 
 def readData():
-    with open('data.txt') as f:
+    with open('2021/Day03-Python/data.txt') as f:
         # lines = f.readlines()
         lines = f.read().splitlines()
         return lines
