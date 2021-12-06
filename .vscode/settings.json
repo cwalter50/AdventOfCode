@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
+        "2021/Day04-Java",
         "2021/Day01-Java",
-        "2021/Day04-Java"
+        "2021/Day05-Java"
     ]
 }
