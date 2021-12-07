@@ -77,7 +77,3 @@ nums = readData()
 part2Answer = part2(nums)
 print("Part2 Answer: " + str(part2Answer))
 
-
-
-# part1(lines)
-# part2(lines)
