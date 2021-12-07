@@ -12,6 +12,8 @@ def readData():
         # lines = f.read().splitlines()
       
       return nums
+    
+    # here is a comment
 
 def part1(nums):
   # loop from min to max of data
