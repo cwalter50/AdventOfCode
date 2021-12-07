@@ -1,0 +1,1 @@
+Fun and easier challenge. Involved finding min distance between values in an array. Part 2 was the same thing except with a summation. My solution took a little time to run to get part 2 solution. Consider refractoring to speed up efficiency of summation in part2
