@@ -1,0 +1,1 @@
+Hardest Challenge to date. Need to make a Tree of Nodes (Kind of). Needed recursion. I built this is swift and Java. It was easier to code in swift, but the playgrounds was taking way to long to run and get solution. Java got the solution in seconds.
