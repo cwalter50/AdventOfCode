@@ -1,0 +1,1 @@
+Part 1 is fun and relatively simple. Part 2 needs a lot of processing power with my solution. I need to find another way to think through the problem and find the answer to part 2.
