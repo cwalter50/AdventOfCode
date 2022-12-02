@@ -2,7 +2,7 @@
 Here are the details about the challenge:
 https://adventofcode.com/2021/day/2
 */
-
+import swift
 import Foundation
 
 if let path = Bundle.main.path(forResource: "data", ofType: "txt") {
