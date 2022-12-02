@@ -43,7 +43,7 @@ def part2(lines):
     part2Answer = first + second + third
     print("Part2 answer is: " + str(part2Answer))
     
-
+print("Test a change to git")
 lines = readData() 
 
 part1(lines) 
