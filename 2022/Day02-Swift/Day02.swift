@@ -3,10 +3,8 @@
 // https://adventofcode.com/2022/day/2
 
 
-// testing git at work computer
 
-
-import UIKit
+import Foundation
 
 /*
  Computer Choices:
@@ -22,6 +20,11 @@ import UIKit
  Win = 6 points
  Draw = 3 point
  Loss = 0
+ 
+ For Part 2:
+ x => You need to lose
+ Y => You need to Tie
+ Z => You need to Win
  
  */
 
@@ -55,6 +58,50 @@ struct Match
         
         return total
     }
+    
+    var matchPointsPart2: Int {
+        var total = 0
+        
+        // check the user choice first to see if you need to win, lose, or tie
+        if userChoice == "X" // you should lose.
+        {
+            total += 0
+            switch compChoice {
+            case "A":
+                total += 3
+            case "B":
+                total += 1
+            default:
+                total += 2
+            }
+        }
+        if userChoice == "Y" // you should tie.
+        {
+            total += 3
+            switch compChoice {
+            case "A":
+                total += 1
+            case "B":
+                total += 2
+            default:
+                total += 3
+            }
+        }
+        if userChoice == "Z" // you should win.
+        {
+            total += 6
+            switch compChoice {
+            case "A":
+                total += 2
+            case "B":
+                total += 3
+            default:
+                total += 1
+            }
+        }
+        
+        return total
+    }
 }
 
 
@@ -64,6 +111,18 @@ func part1(matches: [Match], allMatchPoints: [Int]) -> Int
     
     for i in allMatchPoints {
         total += i
+    }
+    
+    return total
+}
+
+func part2(matches: [Match]) -> Int
+{
+    var total = 0
+    
+    for match in matches
+    {
+        total += match.matchPointsPart2
     }
     
     return total
@@ -92,8 +151,8 @@ if let path = Bundle.main.path(forResource: "data", ofType: "txt") {
 //
         let part1Answer = part1(matches: matches, allMatchPoints: allMatchPoints)
         print("Part1 Answer: \(part1Answer)")
-//        let part2Answer = part2(myLines: lines)
-//        print("Part2 Answer: \(part2Answer)")
+        let part2Answer = part2(matches: matches)
+        print("Part2 Answer: \(part2Answer)")
 
         
     } catch {
