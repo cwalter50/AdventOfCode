@@ -2,7 +2,7 @@
 # https://adventofcode.com/2024/day/1
 
 def readData():
-    with open('2024/Day01-Python/data.txt') as f:
+    with open('2023/Day01-Python/data.txt') as f:
         # lines = f.readlines()
         lines = f.read().splitlines()
         # print(lines)
