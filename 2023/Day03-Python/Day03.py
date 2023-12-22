@@ -27,7 +27,8 @@ class Card:
     self.myNums = []
     for part in part1.split(' '):
         self.myNums.append(part.strip())
-    
+    self.numMatches = 0 # this is for part2 and will be adjusted later
+    self.numCards = 1 # this is for part2
     # self.winNums = [str(s.strip()) for s in nums[0].strip().split(" ")]
     # self.myNums = [str(s.strip()) for s in nums[1].strip().split(" ")]
 
@@ -65,22 +66,29 @@ def part1(lines):
     print("Part1 answer is: " + str(part1Answer))
 
 def part2(lines):
-    nums = []
-    # for line in lines:
-    #     lineNums = getLineNumbers2(line)
-    #     first = lineNums[0]
-    #     last = lineNums[-1]
-    #     # adjust the lineNums if there are wordNums in the list
-        
-    #     num = first * 10 + last
-    #     nums.append(num)
-    # # print(nums)
-    # part2Answer = sum(nums)
-    # print("Part2 answer is: " + str(part2Answer))
+    cards = getCards(lines)
+
+    for i in range(len(cards)):
+        for num in cards[i].winNums:
+            if num in cards[i].myNums:
+                cards[i].numMatches += 1
+    # matches are now accurate for each card
+                
+    for i in range(len(cards)):
+        for j in range(cards[i].numMatches):
+            if i+j+1 < len(cards):
+                cards[i+j+1].numCards += 1*cards[i].numCards
+    # numCards are now accurate for each card
+    
+    total = 0
+    for card in cards:
+        total += card.numCards
+    part2Answer = total
+    print("Part2 answer is: " + str(part2Answer))
 
    
 lines = readData() 
 # cards = getCards(lines)
 
 part1(lines) 
-# part2(lines)
+part2(lines)
